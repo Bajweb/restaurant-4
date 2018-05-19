@@ -50,13 +50,13 @@
 
 	</header>
 
-	<section id="hero" class="hero section">
+	<section id="hero" class="hero section">  
 							
 		<?php if( function_exists('applayHeaderBackgroundImage') ):
 			applayHeaderBackgroundImage(); 
 		endif; ?>
 
-	</section><!--.hero.section-->
+	</section><!--.hero.secti-->
 
 		
 	
