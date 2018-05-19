@@ -1,0 +1,50 @@
+/*
+/////////////////////////////
+MIXINS
+/////////////////////////////
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- Extra Small devices (less than 575.98px )
+- Small devices (landscape phones, less than 768px)
+- Medium devices (tablets, less than 992px)
+- Large devices (desktops, less than 1199.98px)
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+@mixin respond($breakpoint) {
+    @if $breakpoint == large_devices {
+        @media only screen and (min-width: 75em) { @content };    //1199.98px
+    }
+    @if $breakpoint == medium_devices {
+        @media only screen and (max-width: 62em) { @content };    //991.98px
+    }
+    @if $breakpoint == small_devices {
+        @media only screen and (max-width: 48em) { @content };  //767.98px
+    }
+    @if $breakpoint == extra_small_-devices {
+        @media only screen and (max-width: 36.13) { @content };    //575.98px
+    }
+}
+
+@mixin centerAbsPosition() {
+	position: absolute;
+	top: 50%; 
+	left: 50%;
+	transform: translate( -50%, -50% ); 
+}
+
+@mixin borderRadius($br){
+	border-radius: $br;
+	-webkit-border-radius: $br;
+	-moz-border-radius: $br;
+	-o-border-radius: $br;
+	-ms-border-radius: $br;
+}

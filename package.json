@@ -1,0 +1,15 @@
+{
+  "name": "restaurant_4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sasa",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "normalizr": "^3.2.4"
+  }
+}
